@@ -1,0 +1,43 @@
+# geez
+
+> A phone-first MCP tool so Claude (or any MCP client) can call Grok. Minimal. requests-only. No extra bulk.
+
+## Purpose
+Explain geez as a thin wire from an MCP client to Grok. Source: fitzyracing1/geez.
+
+## How it works (plain English)
+1. Run the small MCP tool on the phone or machine.
+2. Let Claude or another MCP client call it.
+3. It forwards the ask to Grok.
+4. Keep the code small: requests only.
+
+## Key ideas
+- Phone-first (meant to run from a phone)
+- MCP tool (a plug for Model Context Protocol clients)
+- Minimal (no extra libraries)
+
+## The actual code
+```
+# source: fitzyracing1/geez
+ask = receive_from_mcp()
+reply = call_grok(ask)
+return reply
+```
+
+## Line-by-line translation
+1. receive_from_mcp() → “take the ask from the client”
+2. call_grok(ask) → “send it to Grok”
+3. return reply → “hand the answer back”
+
+## Decisions the program makes
+- If the client is MCP → accept the call
+- If extra libraries are suggested → stay on requests only
+
+## What a person would notice
+A short pipe from Claude to Grok.
+
+## Current status
+Barrage clone.
+
+## Next possible steps
+Open the source and run the MCP tool.

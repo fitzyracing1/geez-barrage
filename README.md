@@ -1,2 +1,5 @@
 # geez-barrage
-Barrage plain-language clone of fitzyracing1/geez
+
+Barrage clone of [fitzyracing1/geez](https://github.com/fitzyracing1/geez).
+
+Read [listing.barrage](listing.barrage).
